@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="/dist/output.css">
+
+</head>
+
+<body class="h-screen">
+
+  <div class="sm:flex flex-col h-screen">
+
+    <div class="sm:basis-1/3 bg-very-dark-violet pt-8 flex flex-col">
+      <div class="h-36 w-2/3 self-end mr-4 bg-no-repeat rounded-lg bg-[url('/images/bg-card-back.png')] bg-contain flex flex-col place-content-center place-items-end">
+        <div class=" text-white font-bold pr-8 text-xs">
+          <p>000</p>
+        </div>
+
+      </div>
+
+      <div class="relative p-3 -mt-16 z-2 h-36 w-2/3 ml-4 bg-no-repeat rounded-lg bg-[url('/images/bg-card-front.png')]">
+        <div class="pt-1"><img src="/images/card-logo.svg" height="50px" width="50px" alt=""></div>
+        <div class="font-bold text-white text-center pt-6 spacing text-base"><p>0000 0000 0000 0000</p></div>
+        <div class="flex place-content-between text-white pt-4 spacing text-xs">
+          <div><p>JANE APPLESEED</p></div>
+          <div><p>00/00</p></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sm:basis-2/3 bg-white pt-10 pb-4 px-7 h-full -mt-8">
+      <form action="/" class="flex flex-col">
+
+        <div class="flex flex-col mb-4 mt-8">
+          <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="cardholderName">CARDHOLDER
+            NAME</label>
+          <input class="border rounded-md border-light-grayish-violet h-11" type="text" id="cardholderName"
+            placeholder="&nbsp;&nbsp;e.g. Jane Appleseed">
+        </div>
+
+        <div class=" flex flex-col mb-4">
+          <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="cardNumber">CARD NUMBER</label>
+          <input class="border rounded-md border-light-grayish-violet h-11" type="text" id="cardNumber"
+            placeholder="&nbsp;&nbsp; e.g. 1234 5678 9123 0000">
+        </div>
+
+        <div class="flex gap-4">
+
+          <div class="basis-1/2">
+            <div class="flex flex-col">
+              <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="">EXP.DATE(MMYY)</label>
+              <div class="flex gap-1">
+                <input class=" border w-full rounded-md border-light-grayish-violet h-11 mr-2" type="text" id="expDate"
+                  placeholder="&nbsp;&nbsp;MM">
+                <input class=" border w-full rounded-md border-light-grayish-violet h-11" type="text" id="mmYy"
+                  placeholder="&nbsp;&nbsp;YY">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="basis-1/2">
+            <div class="flex flex-col">
+              <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="">CVC</label>
+              <input class="border w-full rounded-md border-light-grayish-violet h-11" type="text" id="cvc"
+                placeholder="&nbsp;&nbsp;CVC">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-6 mb-10">
+          <button class="bg-very-dark-violet w-full h-12 rounded-md text-center text-white">Confirm</button>
+        </div>
+
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="#">Megan Kullu</a>.
+        </div>
+
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

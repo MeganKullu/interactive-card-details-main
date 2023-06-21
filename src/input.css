@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   body {
+    font-family: 'space grotesk';
+   }
+}
+
+@layer components {
+    .spacing {
+        letter-spacing: 0.15rem;
+    }
+}
