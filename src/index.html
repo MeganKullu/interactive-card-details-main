@@ -10,6 +10,7 @@
   <title>Frontend Mentor | Interactive card details form</title>
   <!--  -->
   <link rel="stylesheet" href="/dist/output.css">
+  <script src="./script.js"></script>
 
 </head>
 
@@ -46,19 +47,21 @@
     </div>
 
     <div class="basis-2/3 bg-white pt-10 pb-4 px-7 h-full -mt-8 lg:flex place-content-center place-items-center">
-      <form action="/" class="flex flex-col lg:w-1/2 lg:py-16 ">
+      <form action="#" method="post" class="flex flex-col lg:w-1/2 lg:py-16 " id="cardDetails">
 
         <div class="flex flex-col mb-4 mt-8">
           <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="cardholderName">CARDHOLDER
             NAME</label>
-          <input class="border rounded-md border-light-grayish-violet h-11" type="text" id="cardholderName"
+          <input autocomplete="off"class="hover:border-very-dark-violet hover:border border rounded-md border-light-grayish-violet h-11" type="text" id="cardholderName"
             placeholder="&nbsp;&nbsp;e.g. Jane Appleseed">
+          <small class="text-xs text-red-600" id=""></small>
         </div>
 
         <div class=" flex flex-col mb-4">
           <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="cardNumber">CARD NUMBER</label>
-          <input class="border rounded-md border-light-grayish-violet h-11" type="text" id="cardNumber"
+          <input autocomplete="off"class="hover:border-very-dark-violet hover:border border rounded-md border-light-grayish-violet h-11" type="number" id="cardNumber"
             placeholder="&nbsp;&nbsp; e.g. 1234 5678 9123 0000">
+          <small class="text-xs text-red-600" id="cardNumberError"></small>
         </div>
 
         <div class="flex gap-4">
@@ -67,27 +70,31 @@
             <div class="flex flex-col">
               <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="">EXP.DATE(MMYY)</label>
               <div class="flex gap-1">
-                <input class=" border w-full rounded-md border-light-grayish-violet h-11 mr-2" type="text" id="expDate"
+                <input autocomplete="off"class="hover:border-very-dark-violet hover:border  border w-full rounded-md border-light-grayish-violet h-11 mr-2" type="number" id="expDate"
                   placeholder="&nbsp;&nbsp;MM">
-                <input class=" border w-full rounded-md border-light-grayish-violet h-11" type="text" id="mmYy"
+                <small class="text-xs text-red-600" id="expDateError"></small>  
+                <input autocomplete="off"class="hover:border-very-dark-violet hover:border  border w-full rounded-md border-light-grayish-violet h-11" type="number" id="mmYy"
                   placeholder="&nbsp;&nbsp;YY">
+                <small class="text-xs text-red-600" id="expDateError"></small>
               </div>
+          
             </div>
           </div>
 
 
           <div class="basis-1/2">
             <div class="flex flex-col">
-              <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="">CVC</label>
-              <input class="border w-full rounded-md border-light-grayish-violet h-11" type="text" id="cvc"
+              <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="">CVV</label>
+              <input autocomplete="off"class="hover:border-very-dark-violet hover:border border w-full rounded-md border-light-grayish-violet h-11" type="number" min="000" max="999" id="cvv"
                 placeholder="&nbsp;&nbsp;CVC">
+              <small class="text-xs text-red-600" id="cvvError"></small>
             </div>
           </div>
 
         </div>
 
         <div class="mt-6 mb-10">
-          <button class="bg-very-dark-violet w-full h-12 rounded-md text-center text-white hover:opacity-30">Confirm</button>
+          <button type="submit" class="bg-very-dark-violet w-full h-12 rounded-md text-center text-white hover:opacity-30 ">Confirm</button>
         </div>
 
         <div class="attribution">
