@@ -52,14 +52,14 @@
         <div class="flex flex-col mb-4 mt-8">
           <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="cardholderName">CARDHOLDER
             NAME</label>
-          <input autocomplete="off"class=" hover:border-very-dark-violet hover:border border rounded-md border-light-grayish-violet h-11" type="text" id="cardholderName"
+          <input oninput="validateCreditCardForm()" autocomplete="off"class=" hover:border-very-dark-violet hover:border border rounded-md border-light-grayish-violet h-11" type="text" id="cardholderName"
             placeholder="&nbsp;&nbsp;e.g. Jane Appleseed">
           <small class="text-xs text-red-600" id=""></small>
         </div>
 
         <div class=" flex flex-col mb-4">
           <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="cardNumber">CARD NUMBER</label>
-          <input autocomplete="off"class="hover:border-very-dark-violet hover:border border rounded-md border-light-grayish-violet h-11" type="number" id="cardNumber"
+          <input oninput="validateCreditCardNumber()" autocomplete="off"class="hover:border-very-dark-violet hover:border border rounded-md border-light-grayish-violet h-11" type="number" id="cardNumber"
             placeholder="&nbsp;&nbsp; e.g. 1234 5678 9123 0000">
           <small class="text-xs text-red-600" id="cardNumberError"></small>
         </div>
@@ -70,10 +70,10 @@
             <div class="flex flex-col">
               <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="">EXP.DATE(MMYY)</label>
               <div class="flex gap-1">
-                <input autocomplete="off"class="hover:border-very-dark-violet hover:border  border w-full rounded-md border-light-grayish-violet h-11 mr-2" type="number" id="expDate"
+                <input oninput="validateCreditCardForm()" autocomplete="off"class="hover:border-very-dark-violet hover:border  border w-full rounded-md border-light-grayish-violet h-11 mr-2" type="number" id="expDate"
                   placeholder="&nbsp;&nbsp;MM">
                 <small class="text-xs text-red-600" id="expDateError"></small>  
-                <input autocomplete="off"class="hover:border-very-dark-violet hover:border  border w-full rounded-md border-light-grayish-violet h-11" type="number" id="mmYy"
+                <input oninput="validateCreditCardForm()" autocomplete="off"class="hover:border-very-dark-violet hover:border  border w-full rounded-md border-light-grayish-violet h-11" type="number" id="mmYy"
                   placeholder="&nbsp;&nbsp;YY">
                 <small class="text-xs text-red-600" id="expDateError"></small>
               </div>
@@ -85,7 +85,7 @@
           <div class="basis-1/2">
             <div class="flex flex-col">
               <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="">CVV</label>
-              <input autocomplete="off"class="hover:border-very-dark-violet hover:border border w-full rounded-md border-light-grayish-violet h-11" type="number" min="000" max="999" id="cvv"
+              <input oninput="validateCreditCardForm()" autocomplete="off"class="hover:border-very-dark-violet hover:border border w-full rounded-md border-light-grayish-violet h-11" type="number" min="000" max="999" id="cvv"
                 placeholder="&nbsp;&nbsp;CVC">
               <small class="text-xs text-red-600" id="cvvError"></small>
             </div>
