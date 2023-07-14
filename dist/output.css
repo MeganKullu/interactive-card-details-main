@@ -745,6 +745,11 @@ body {
   font-weight: 700;
 }
 
+.text-red-600{
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .text-very-dark-violet{
   --tw-text-opacity: 1;
   color: hsl(278 68% 11% / var(--tw-text-opacity));
@@ -757,14 +762,6 @@ body {
 
 .hover\:border:hover{
   border-width: 1px;
-}
-
-.hover\:border-4:hover{
-  border-width: 4px;
-}
-
-.hover\:border-2:hover{
-  border-width: 2px;
 }
 
 .hover\:border-very-dark-violet:hover{

@@ -11,14 +11,51 @@ document.getElementById("cardDetails").addEventListener("submit", function (e) {
 });
 
 // Event listeners for real-time validation
+document.getElementById("cardholderName").addEventListener("input", validateCardholderName);
 document.getElementById("expDate").addEventListener("input", validateExpDate);
 document.getElementById("mmYy").addEventListener("input", validateExpDate);
 document.getElementById("cvv").addEventListener("input", validateCVV);
 document.getElementById("cardNumber").addEventListener("input", validateCardNumber);
 
 function validateCreditCardForm() {
-    return validateExpDate() && validateCVV() && validateCardNumber();
+    return (
+        validateCardholderName() &&
+        validateExpDate() &&
+        validateCVV() &&
+        validateCardNumber()
+    );
 }
+
+function validateCardholderName() {
+    const cardholderNameInput = document.getElementById("cardholderName");
+    const cardholderNameError = document.getElementById("cardholderNameError");
+
+    const cardholderName = cardholderNameInput.value;
+
+    // Remove leading/trailing white spaces from the cardholder name
+    const trimmedCardholderName = cardholderName.trim();
+
+    if (trimmedCardholderName === "") {
+        cardholderNameError.innerHTML = "Cardholder name is required";
+        return false;
+    }
+
+    if (/\d/.test(trimmedCardholderName)) {
+        cardholderNameError.innerHTML = "Cardholder name cannot contain numbers";
+        return false;
+    }
+
+    if(trimmedCardholderName.length > 25) {
+        cardholderNameError.innerHTML = "Cardholder name too long";
+        return false;
+    }
+
+    cardholderNameError.innerHTML = "";
+    return true;
+}
+
+// Rest of the validation functions...
+
 
 function validateExpDate() {
     const expDateInput = document.getElementById("expDate");
