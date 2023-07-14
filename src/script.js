@@ -1,84 +1,72 @@
-const form = document.getElementById("cardDetails");
-
-form.addEventListener(function (e) {
-    // prevent the form from submitting
+// Event listener for form submission
+document.getElementById("cardDetails").addEventListener("submit", function (e) {
     e.preventDefault();
 
     if (!validateCreditCardForm()) {
         return false;
     }
 
-    //submit the form
-
-    form.submit;
-
+    // Submit the form
+    this.submit();
 });
 
+// Event listeners for real-time validation
+document.getElementById("expDate").addEventListener("input", validateExpDate);
+document.getElementById("mmYy").addEventListener("input", validateExpDate);
+document.getElementById("cvv").addEventListener("input", validateCVV);
+document.getElementById("cardNumber").addEventListener("input", validateCardNumber);
+
 function validateCreditCardForm() {
-    // Get the values of the form inputs.
+    return validateExpDate() && validateCVV() && validateCardNumber();
+}
 
-    const expDate = document.getElementById("expDate").value;
-    const cvv = document.getElementById("cvv").value;
-    const monthYear = document.getElementById("mmYy").value;
+function validateExpDate() {
+    const expDateInput = document.getElementById("expDate");
+    const mmYyInput = document.getElementById("mmYy");
+    const expDateError = document.getElementById("expDateError");
 
+    const expDate = expDateInput.value;
+    const mmYy = mmYyInput.value;
 
-    // Check the expiration date format.
-    expDate.addEventListener('input', function () {
-        if (!expDate.match(/^[0-9]{2}\/[0-9]{2}$/)) {
-            document.getElementById("expDateError").innerHTML = "Invalid expiration date";
-            return false;
-        }
-    })
+    const expDatePattern = /^[0-9]{2}$/;
 
-    monthYear.addEventListener('input', function () {
-        if (!monthYear.match(/^[0-9]{2}\/[0-9]{2}$/)) {
-            document.getElementById("expDateError").innerHTML = "Invalid expiration date";
-            return false;
-        }
-    })
+    if (!expDate.match(expDatePattern) || !mmYy.match(expDatePattern)) {
+        expDateError.innerHTML = "Invalid expiration date";
+        return false;
+    }
 
-    // Check the CVV format.
-    cvv.addEventListener('input', function () {
-        if (!cvv.match(/^[0-9]{3}$/)) {
-            document.getElementById("cvvError").innerHTML = "Invalid CVV";
-            return false;
-        }
-    })
-
-    // The form is valid.
+    expDateError.innerHTML = "";
     return true;
 }
 
+function validateCVV() {
+    const cvvInput = document.getElementById("cvv");
+    const cvvError = document.getElementById("cvvError");
 
-function validateCardNumber(cardNumber) {
-    //check the card number format
+    const cvv = cvvInput.value;
+    const cvvPattern = /^[0-9]{3}$/;
 
-    const cardNumber = document.getElementById("cardNumber").value;
-
-    cardNumber.addEventListener('input', function () {
-        if (!cardNumber.match(/^[0-9]{16}$/)) {
-            document.getElementById("cardNumberError").innerHTML = "Invalid card number";
-            return false;
-        }
-    })
-    // using luhn's algorithm to check further for validity
-    let sum = 0;
-    for (let i = 0; i < cardNumber.length; i++) {
-        let digit = cardNumber.charAt(i);
-        if (i % 2 == 0) {
-            digit = digit * 2;
-            if (digit > 9) {
-                digit = digit - 9;
-            }
-        }
-        sum += digit;
+    if (!cvv.match(cvvPattern)) {
+        cvvError.innerHTML = "Invalid CVV";
+        return false;
     }
 
-    cardNumber.addEventListener('input', function () {
-    if (sum % 10 != 0) {
-        document.getElementById("cardNumberError").innerHTML = "Invalid please input Visa or MasterCard ";
-        return false;
-    }})
+    cvvError.innerHTML = "";
+    return true;
+}
 
+function validateCardNumber() {
+    const cardNumberInput = document.getElementById("cardNumber");
+    const cardNumberError = document.getElementById("cardNumberError");
+
+    const cardNumber = cardNumberInput.value;
+    const cardNumberPattern = /^[0-9]{16}$/;
+
+    if (!cardNumber.match(cardNumberPattern)) {
+        cardNumberError.innerHTML = "Invalid card number";
+        return false;
+    }
+
+    cardNumberError.innerHTML = "";
     return true;
 }
