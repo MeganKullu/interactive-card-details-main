@@ -1,6 +1,6 @@
 const form = document.getElementById("cardDetails");
 
-form.addEventListener('submit', function (e) {
+form.addEventListener('input', function (e) {
     // prevent the form from submitting
     e.preventDefault();
 
