@@ -33,7 +33,9 @@ The challenge was to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/desktopscreenshot.png)
+![](./images/mobilescreenshot.png.png)
+
 
 
 ### Links
