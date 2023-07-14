@@ -4,6 +4,14 @@ form.addEventListener('submit', function (e) {
     // prevent the form from submitting
     e.preventDefault();
 
+    if(!validateCreditCardForm()) {
+        return false;
+    }
+
+    //submit the form
+
+    form.submit;
+
 });
 
 function validateCreditCardForm() {
