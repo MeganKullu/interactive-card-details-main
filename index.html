@@ -10,7 +10,7 @@
   <title>Frontend Mentor | Interactive card details form</title>
   <!--  -->
   <link rel="stylesheet" href="./dist/output.css">
-  <script src="./src/script.js"></script>
+  
 
 </head>
 
@@ -54,7 +54,7 @@
             NAME</label>
           <input autocomplete="off"class=" hover:border-very-dark-violet hover:border border rounded-md border-light-grayish-violet h-11" type="text" id="cardholderName"
             placeholder="&nbsp;&nbsp;e.g. Jane Appleseed">
-          <small class="text-xs text-red-600" id=""></small>
+          <small class="text-xs text-red-600" id="cardholderNameError"></small>
         </div>
 
         <div class=" flex flex-col mb-4">
@@ -68,7 +68,7 @@
 
           <div class="basis-1/2">
             <div class="flex flex-col">
-              <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="">EXP.DATE(MMYY)</label>
+              <label class="text-very-dark-violet text-xs spacing font-bold pb-2">EXP.DATE(MMYY)</label>
               <div class="flex gap-1">
                 <input autocomplete="off"class="hover:border-very-dark-violet hover:border  border w-full rounded-md border-light-grayish-violet h-11 mr-2" type="number" id="expDate"
                   placeholder="&nbsp;&nbsp;MM">
@@ -105,6 +105,7 @@
       </form>
     </div>
   </div>
+  <script src="./src/script.js"></script>
 </body>
 
 </html>

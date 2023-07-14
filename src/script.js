@@ -6,8 +6,6 @@ document.getElementById("cardDetails").addEventListener("submit", function (e) {
         return false;
     }
 
-    // Submit the form
-    this.submit();
 });
 
 // Event listeners for real-time validation
@@ -25,6 +23,7 @@ function validateCreditCardForm() {
         validateCardNumber()
     );
 }
+//Validation functions
 
 function validateCardholderName() {
     const cardholderNameInput = document.getElementById("cardholderName");
@@ -54,7 +53,7 @@ function validateCardholderName() {
     return true;
 }
 
-// Rest of the validation functions...
+
 
 
 function validateExpDate() {
