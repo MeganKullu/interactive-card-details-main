@@ -18,7 +18,7 @@
 
   <div class=" flex flex-col lg:flex-row lg:h-screen ">
 
-    <div class="basis-1/3  bg-[url('/images/bg-main-mobile.png')] lg:bg-[url(/images/bg-main-desktop.png')] bg-no-repeat h-full bg-cover flex-col pt-8 lg:pt-0 lg:flex lg:flex-col-reverse lg:place-content-center">
+    <aside class="basis-1/3  bg-[url('/images/bg-main-mobile.png')] lg:bg-[url(/images/bg-main-desktop.png')] bg-no-repeat h-full bg-cover flex-col pt-8 lg:pt-0 lg:flex lg:flex-col-reverse lg:place-content-center">
 
       <div
         class=" bg-no-repeat rounded-lg bg-[url('/images/bg-card-back.png')] bg-contain mr-2 ml-24 h-36 lg:h-48 lg:w-3/4 w-2/3 self-end flex flex-col place-content-center place-items-end lg:mb-24 lg:-mr-32 relative z-2 ">
@@ -44,30 +44,30 @@
         </div>
       </div>
 
-    </div>
+    </aside>
 
-    <div class="basis-2/3 bg-white pt-10 pb-4 px-7 h-full -mt-8 lg:flex place-content-center place-items-center">
+    <main class="basis-2/3 bg-white pt-10 pb-4 px-7 h-full -mt-8 lg:flex place-content-center place-items-center">
       <form action="#" method="post" class="flex flex-col lg:w-1/2 lg:py-16 " id="cardDetails">
 
-        <div class="flex flex-col mb-4 mt-8">
+        <section class="flex flex-col mb-4 mt-8">
           <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="cardholderName">CARDHOLDER
             NAME</label>
           <input autocomplete="off"class=" hover:border-very-dark-violet hover:border border rounded-md border-light-grayish-violet h-11" type="text" id="cardholderName"
             placeholder="&nbsp;&nbsp;e.g. Jane Appleseed">
           <small class="text-xs text-red-600" id="cardholderNameError"></small>
-        </div>
+        </section>
 
-        <div class=" flex flex-col mb-4">
+        <section class=" flex flex-col mb-4">
           <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="cardNumber">CARD NUMBER</label>
           <input  autocomplete="off"class="hover:border-very-dark-violet hover:border border rounded-md border-light-grayish-violet h-11" type="number" id="cardNumber"
             placeholder="&nbsp;&nbsp; e.g. 1234 5678 9123 0000">
           <small class="text-xs text-red-600" id="cardNumberError"></small>
-        </div>
+        </section>
 
         <div class="flex gap-4">
 
           <div class="basis-1/2">
-            <div class="flex flex-col">
+            <section class="flex flex-col">
               <label class="text-very-dark-violet text-xs spacing font-bold pb-2">EXP.DATE(MMYY)</label>
               <div class="flex gap-1">
                 <input autocomplete="off"class="hover:border-very-dark-violet hover:border  border w-full rounded-md border-light-grayish-violet h-11 mr-2" type="number" id="expDate"
@@ -78,32 +78,32 @@
                 <small class="text-xs text-red-600" id="expDateError"></small>
               </div>
           
-            </div>
+            </section>
           </div>
 
 
-          <div class="basis-1/2">
+          <section class="basis-1/2">
             <div class="flex flex-col">
               <label class="text-very-dark-violet text-xs spacing font-bold pb-2 " for="">CVV</label>
               <input autocomplete="off"class="hover:border-very-dark-violet hover:border border w-full rounded-md border-light-grayish-violet h-11" type="number" min="000" max="999" id="cvv"
                 placeholder="&nbsp;&nbsp;CVC">
               <small class="text-xs text-red-600" id="cvvError"></small>
             </div>
-          </div>
+          </section>
 
         </div>
 
-        <div class="mt-6 mb-10">
+        <section class="mt-6 mb-10">
           <button type="submit" class="bg-very-dark-violet w-full h-12 rounded-md text-center text-white hover:opacity-30 ">Confirm</button>
-        </div>
+        </section>
 
-        <footer class="attribution">
+        <section class="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
           Coded by <a href="#">Megan Kullu</a>.
-        </footer>
+        </section>
 
       </form>
-    </div>
+    </main>
   </div>
   <script src="./src/script.js"></script>
 </body>
