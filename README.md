@@ -80,8 +80,8 @@ I want to focus on building projects using React Framework and Next.js library.
 
 ## Author
 
-- LinkedIn - [Megan Kullu](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/MeganKullu)
+- LinkedIn - [Megan Kullu](https://www.linkedin.com/in/megankullu)
+- Frontend Mentor - [@MeganKullu](https://www.frontendmentor.io/profile/MeganKullu)
 - Twitter - [@megankullu](https://www.twitter.com/megankullu)
 
 
